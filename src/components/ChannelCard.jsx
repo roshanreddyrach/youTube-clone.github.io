@@ -12,7 +12,7 @@ const ChannelCard = ( { channelDetail, marginTop }) => (
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: { xs: '356px', md: '320px'},
+        width: { xs: '100%', md: '100%'},
         height: '326px',
         marginTop,
       }}
@@ -30,11 +30,10 @@ const ChannelCard = ( { channelDetail, marginTop }) => (
            </Typography>
            {channelDetail?.statistics?.subscriberCount &&(
             <Typography>
-              {parseInt(channelDetail?.subscriberCount).toLocaleString()} Subscribers
+              {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString() } Subscribers
             </Typography>
            )}
         </CardContent>
-           
       </Link>
     </Box>
   )
